@@ -1,0 +1,8 @@
+/* Q9: Newspaper columns using column-count and column-span */
+body{font-family:Georgia,serif;background:#f6f4ee;padding:2rem}
+.paper{max-width:900px;margin:0 auto;background:#fff;padding:1.5rem}
+.span{column-span:all;text-align:center;font-size:1.8rem;margin:0 0 1rem 0}
+.columns{column-count:3;column-gap:2rem;column-fill:balance;text-align:justify}
+.floatimg{float:left;margin-right:1rem;margin-bottom:0.5rem;width:150px}
+mark{background:#ffef9f}
+@media(max-width:800px){.columns{column-count:1}.floatimg{float:none;display:block;margin:0 auto 1rem auto}}

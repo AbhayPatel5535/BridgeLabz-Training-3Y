@@ -1,0 +1,13 @@
+/* Q5: Pricing table - equal columns with hover and transitions */
+body{font-family:Arial,Helvetica,sans-serif;margin:2rem;background:#f7fafc;color:#0b2136}
+.plans{display:flex;gap:1rem}
+.plan{flex:1;background:#fff;padding:1.25rem;border:2px solid #e6eef8;border-radius:8px;display:flex;flex-direction:column;align-items:center;transition:transform .25s ease,background .25s ease;min-height:220px}
+.plan:hover{transform:scale(1.03);background:#f0f8ff}
+.plan h2{margin:0 0 0.5rem 0}
+.plan ul{list-style:none;padding:0;margin:0 0 1rem 0}
+.plan .price{font-size:1.5rem;font-weight:700;margin-top:auto}
+.btn{display:inline-block;margin-top:1rem;padding:.5rem 1rem;background:#1e3a8a;color:#fff;text-decoration:none;border-radius:6px}
+/* highlight most popular plan */
+.plan.popular{border-color:#f97316;background:linear-gradient(180deg,#fff7ed,#fffaf0)}
+/* equal heights ensured by flex and min-height */
+@media(max-width:800px){.plans{flex-direction:column}}

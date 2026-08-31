@@ -1,0 +1,14 @@
+/* Q3: Team Members - flex layout and responsive stacking */
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:2rem;background:#f5f7fb;color:#0b2136}
+header h1{margin:0 0 1rem 0}
+.team{display:flex;gap:1.5rem}
+.card{flex:1;background:#fff;padding:1.25rem;border:2px solid #e6eef8;border-radius:8px;box-shadow:0 6px 18px rgba(11,33,70,0.06)}
+.card h3{margin-top:0}
+.card .role{font-weight:600;color:#1e3a8a}
+.card p{margin:0.5rem 0 0}
+/* highlight lead */
+.card.lead{background:#fffbeb;border-style:solid;border-color:#f59e0b}
+/* uniform box model spacing */
+.card{padding:1rem;margin:0}
+/* responsive: single column under 600px */
+@media(max-width:600px){.team{flex-direction:column}}

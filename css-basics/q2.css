@@ -1,0 +1,23 @@
+/* Q2: Multi-section informational page */
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial;background:#f0f4f8;color:#0b2545}
+header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;background:#fff;box-shadow:0 2px 6px rgba(11,37,69,0.06)}
+header nav a{margin-left:1rem;text-decoration:none;color:#0b2545}
+main section{min-height:55vh;display:flex;align-items:center}
+.container{max-width:1100px;margin:0 auto;padding:2rem}
+.bg-image{background-image:url('https://picsum.photos/1200/800?city');background-size:cover;background-position:center;background-attachment:fixed;color:#fff}
+.bg-image .inner{background:rgba(0,0,0,0.25);padding:2rem}
+.gradient{background:linear-gradient(120deg,#ffe6a7,#ffb4a2);}
+.radial{background:radial-gradient(circle at 20% 30%, #c7f0ff, #8ec5d9);}
+.parallax{background-image:url('https://picsum.photos/seed/park/1200/800');background-attachment:fixed;background-size:cover;background-position:center}
+main section h2{font-size:2rem;margin-top:0}
+main section p{max-width:60%}
+footer{padding:1rem;text-align:center;background:#fff}
+/* spacing and borders */
+main section{padding:3rem;border-top:1px solid rgba(11,37,69,0.06)}
+/* headings weight and size variation */
+h1{font-size:2rem;font-weight:700}
+h2{font-size:1.5rem;font-weight:600}
+/* make sure two sections keep fixed background for parallax effect */
+/* responsive */
+@media(max-width:800px){.bg-image,.parallax{background-attachment:scroll}.container{padding:1rem}main section p{max-width:100%}}
