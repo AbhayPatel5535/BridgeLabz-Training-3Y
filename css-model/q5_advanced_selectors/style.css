@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.site-header,
+.site-footer {
+    text-align: center;
+    padding: 25px;
+    background: #172554;
+    color: white;
+}
+
+.site-header h1 {
+    margin: 0 0 8px;
+}
+
+.site-header p,
+.site-footer p {
+    margin: 0;
+}
+
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.selector-section {
+    margin-bottom: 35px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #cbd5e1;
+    border-radius: 12px;
+}
+
+.selector-section h2 {
+    margin-top: 0;
+}
+
+/* Attribute selector: selects inputs whose type is exactly "text". */
+input[type="text"] {
+    border: 3px solid #2563eb;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Attribute selector: selects links whose href starts with "https". */
+a[href^="https"] {
+    color: #047857;
+    font-weight: bold;
+}
+
+/* :hover pseudo-class changes an element when the mouse is over it. */
+a:hover {
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+/* :focus pseudo-class styles an input while it has keyboard/mouse focus. */
+input:focus {
+    outline: 3px solid #f59e0b;
+    outline-offset: 2px;
+}
+
+/* :nth-child() pseudo-class styles a specific child by its position. */
+.pseudo-list li:nth-child(2) {
+    font-weight: bold;
+    background: #fef3c7;
+}
+
+/* Pseudo-element ::before adds generated content before an element. */
+.pseudo-list li::before {
+    content: "✓ ";
+    font-weight: bold;
+}
+
+/* Pseudo-element ::after adds generated content after an element. */
+.pseudo-list li::after {
+    content: " •";
+    color: #64748b;
+}
+
+/* Descendant combinator: styles every p inside .parent-box. */
+.parent-box p {
+    padding: 10px;
+    background: #f1f5f9;
+}
+
+/* Child combinator (>):
+   styles only p elements that are direct children of .parent-box. */
+.parent-box > p {
+    border-left: 5px solid #2563eb;
+}
+
+/* Adjacent sibling combinator (+):
+   styles the paragraph immediately after .nested-box. */
+.nested-box + .after-nested {
+    border-top: 4px solid #16a34a;
+    padding-top: 15px;
+}
+
+/* General sibling combinator (~):
+   styles all p siblings that appear after .first-paragraph. */
+.first-paragraph ~ p {
+    font-style: italic;
+}
+
+/* Hover effect for list items */
+.item-list li:hover {
+    background: #e0f2fe;
+}
+
+/* A visible style for the focus demonstration */
+.focus-label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.focus-label input {
+    margin-left: 10px;
+    padding: 10px;
+    border: 2px solid #94a3b8;
+    border-radius: 6px;
+}

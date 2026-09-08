@@ -1,0 +1,106 @@
+/* Basic page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #222;
+}
+
+.site-header,
+.site-footer {
+    text-align: center;
+    padding: 24px;
+    background: #1f2937;
+    color: white;
+}
+
+.site-header h1 {
+    margin: 0 0 8px;
+}
+
+.site-header p,
+.site-footer p {
+    margin: 0;
+}
+
+main {
+    padding: 40px 20px;
+}
+
+.demo-section {
+    max-width: 1200px;
+    margin: 0 auto 45px;
+}
+
+.demo-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Flexbox places the boxes horizontally in one row when space allows. */
+.box-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Common box styling */
+.demo-box {
+    flex: 1 1 220px;
+    max-width: 260px;
+    min-height: 160px;
+    background: white;
+    padding: 20px;
+    transition: border-color 0.4s ease, transform 0.4s ease;
+}
+
+.demo-box:hover {
+    border-color: #e11d48;
+    transform: translateY(-4px);
+}
+
+.demo-box h3 {
+    margin-top: 0;
+}
+
+/* Different border styles */
+.solid-box {
+    border: 6px solid #2563eb;
+}
+
+.dashed-box {
+    border: 6px dashed #16a34a;
+}
+
+.double-box {
+    border: 8px double #9333ea;
+}
+
+.groove-box {
+    border: 8px groove #ea580c;
+}
+
+/* Rounded corner examples with different padding values */
+.rounded-small {
+    border: 5px solid #0f766e;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.rounded-medium {
+    border: 5px solid #0891b2;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.rounded-large {
+    border: 5px solid #7c3aed;
+    border-radius: 40px;
+    padding: 40px;
+}

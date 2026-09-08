@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced CSS Selectors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="site-header">
+        <h1>Advanced CSS Selectors</h1>
+        <p>Attribute selectors, pseudo-classes, pseudo-elements, and combinators.</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <h2>Attribute Selector Examples</h2>
+
+            <ul class="item-list">
+                <li>Normal list item</li>
+                <li><input type="text" placeholder="Text input using [type='text']"></li>
+                <li><input type="email" placeholder="Email input"></li>
+                <li><a href="https://example.com">HTTPS link using [href^='https']</a></li>
+                <li><a href="https://openai.com">Another HTTPS link</a></li>
+            </ul>
+        </section>
+
+        <section class="selector-section interactive-section">
+            <h2>Combinator Examples</h2>
+
+            <div class="parent-box">
+                <p class="first-paragraph">First paragraph: this is a direct child.</p>
+                <p>Second paragraph: this is another direct child.</p>
+
+                <div class="nested-box">
+                    <p>Nested paragraph: this is a descendant, not a direct child.</p>
+                </div>
+
+                <p class="after-nested">This paragraph demonstrates the general sibling selector.</p>
+            </div>
+        </section>
+
+        <section class="selector-section">
+            <h2>Pseudo-class Examples</h2>
+
+            <ol class="pseudo-list">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+                <li>Fourth item</li>
+            </ol>
+
+            <label class="focus-label">
+                Focus this field:
+                <input type="text" placeholder="Click here">
+            </label>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Advanced Selectors Practice</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #eef2ff;
+    color: #172033;
+}
+
+.site-header,
+.site-footer {
+    text-align: center;
+    padding: 25px;
+    background: #312e81;
+    color: white;
+}
+
+.site-header h1 {
+    margin: 0 0 8px;
+}
+
+.site-header p,
+.site-footer p {
+    margin: 0;
+}
+
+/* Flexbox centers the collection horizontally and vertically. */
+.page-content {
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* The boxes are also arranged horizontally with Flexbox. */
+.size-demo {
+    width: 100%;
+    max-width: 1100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* Base styling for all size examples */
+.size-box {
+    padding: 20px;
+    border-radius: 12px;
+    border: 3px solid #1e1b4b;
+    text-align: center;
+    overflow: hidden;
+}
+
+.size-box h2 {
+    margin-top: 0;
+}
+
+/* Width and height in px */
+.box-px {
+    width: 260px;
+    height: 160px;
+    background: #bfdbfe;
+}
+
+/* Percentage width and viewport-height */
+.box-percent {
+    width: 45%;
+    height: 20vh;
+    min-height: 150px;
+    background: #bbf7d0;
+}
+
+/* em is relative to the element's font size */
+.box-em {
+    width: 18em;
+    min-height: 12em;
+    background: #fde68a;
+}
+
+/* Demonstrates max-width, min-height, and overflow */
+.box-limits {
+    width: 70%;
+    max-width: 300px;
+    min-height: 180px;
+    max-height: 180px;
+    background: #fecaca;
+    overflow: hidden;
+}
+
+@media (max-width: 700px) {
+    .page-content {
+        padding: 25px 15px;
+    }
+
+    .box-percent,
+    .box-limits {
+        width: 100%;
+    }
+}

@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: #111827;
+}
+
+/* Fixed header stays at the top while the page scrolls. */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 90px;
+    z-index: 10;
+    text-align: center;
+    padding: 18px 20px;
+    background: rgba(17, 24, 39, 0.95);
+}
+
+.fixed-header h1 {
+    margin: 0 0 5px;
+}
+
+.fixed-header p {
+    margin: 0;
+}
+
+/* Each section fills most of the viewport. */
+.gradient-section {
+    min-height: 100vh;
+    padding: 150px 30px 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Linear gradient moves smoothly along a direction. */
+.linear-section {
+    background: linear-gradient(135deg, #2563eb, #7c3aed, #db2777);
+}
+
+/* Radial gradient expands outward from a central point. */
+.radial-section {
+    background: radial-gradient(circle at center, #f59e0b, #dc2626, #7f1d1d);
+}
+
+/* Fixed background creates a parallax-like visual effect. */
+.parallax-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+                      url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1600&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.content-card {
+    width: min(650px, 100%);
+    padding: 45px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.35);
+    text-align: center;
+    backdrop-filter: blur(4px);
+}
+
+.content-card h2 {
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.content-card p {
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.fixed-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    text-align: center;
+    padding: 14px;
+    background: rgba(17, 24, 39, 0.95);
+}
+
+.fixed-footer p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .fixed-header {
+        min-height: 105px;
+    }
+
+    .gradient-section {
+        padding-top: 165px;
+    }
+
+    .content-card {
+        padding: 30px 20px;
+    }
+
+    .parallax-section {
+        background-attachment: scroll;
+    }
+}
