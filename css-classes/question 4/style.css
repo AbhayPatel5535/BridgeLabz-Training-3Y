@@ -1,0 +1,116 @@
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+header {
+    padding: 30px 20px;
+    text-align: center;
+    background: #164e63;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 35px 20px;
+}
+
+.selector-section {
+    margin-bottom: 28px;
+    padding: 25px;
+    background: white;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(15, 23, 42, 0.06);
+}
+
+.selector-section h2 {
+    margin-top: 0;
+    color: #0e7490;
+}
+
+/* Element selector: styles every paragraph. */
+p {
+    line-height: 1.6;
+}
+
+/* Class selector: styles elements with class="highlight". */
+.highlight {
+    padding: 10px 14px;
+    background: #cffafe;
+    border-left: 5px solid #0891b2;
+}
+
+/* ID selector: styles the unique element with id="special". */
+#special {
+    padding: 10px 14px;
+    background: #fef3c7;
+    border-left: 5px solid #d97706;
+}
+
+/* Attribute selector: targets links that have an href attribute. */
+a[href] {
+    color: #0369a1;
+    font-weight: bold;
+}
+
+/* Descendant combinator: all paragraphs inside .combinator-demo. */
+.combinator-demo p {
+    padding: 8px;
+    background: #f1f5f9;
+}
+
+/* Child combinator (>): only direct children of .combinator-demo. */
+.combinator-demo > p {
+    border-left: 4px solid #0e7490;
+}
+
+/* Adjacent sibling combinator (+): the first p immediately after the div. */
+.combinator-demo div + p {
+    background: #dcfce7;
+    border-left: 4px solid #16a34a;
+}
+
+/* General sibling combinator (~): list items after the first item. */
+.sibling-list li:first-child {
+    font-weight: bold;
+}
+
+.sibling-list li:first-child ~ li {
+    background: #ede9fe;
+    margin-top: 6px;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+/* Direct child selector for list items. */
+.sibling-list > li {
+    padding: 5px;
+}
+
+/* Keep spacing consistent without relying on external frameworks. */
+.selector-section + .selector-section {
+    margin-top: 20px;
+}
+
+footer {
+    padding: 22px;
+    text-align: center;
+    color: #64748b;
+}

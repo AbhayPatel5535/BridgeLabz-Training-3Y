@@ -1,0 +1,123 @@
+/* Basic page layout */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #172033;
+}
+
+header {
+    padding: 32px 20px;
+    text-align: center;
+    background: #312e81;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* Flexbox centers all tooltip examples on the page. */
+.tooltip-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+    flex-wrap: wrap;
+}
+
+.tooltip-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 92px;
+    min-height: 92px;
+    padding: 18px 22px;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #dbe3ef;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.10);
+    cursor: help;
+}
+
+.icon {
+    font-size: 34px;
+    font-weight: bold;
+    color: #4338ca;
+}
+
+.word {
+    font-size: 20px;
+    font-weight: bold;
+    color: #4338ca;
+}
+
+/* Tooltip is positioned above the hovered element. */
+.tooltip-text {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 14px);
+    transform: translateX(-50%) translateY(8px);
+    width: 190px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #111827;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* CSS-only tooltip reveal on hover. */
+.tooltip-item:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Small arrow connecting the tooltip to its element. */
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: 7px solid transparent;
+    border-top-color: #111827;
+}
+
+footer {
+    padding: 22px;
+    text-align: center;
+    color: #64748b;
+}
+
+@media (max-width: 600px) {
+    .tooltip-area {
+        gap: 45px;
+    }
+}

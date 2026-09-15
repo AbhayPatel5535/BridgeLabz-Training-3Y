@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Demonstration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Pseudo-Classes</h1>
+        <p>Hover, focus, active, and nth-child() states in action.</p>
+    </header>
+
+    <main>
+        <section class="examples" aria-label="Pseudo-class examples">
+            <article class="example-card">
+                <h2>:hover</h2>
+                <a class="hover-link" href="#hover">Hover over this link</a>
+                <p>Changes the link background and text color when the pointer is over it.</p>
+            </article>
+
+            <article class="example-card">
+                <h2>:focus</h2>
+                <button class="focus-button">Click or Tab to focus</button>
+                <p>Shows a visible outline when the button receives keyboard or mouse focus.</p>
+            </article>
+
+            <article class="example-card">
+                <h2>:active</h2>
+                <button class="active-button">Press and hold me</button>
+                <p>Changes appearance while the button is being pressed.</p>
+            </article>
+
+            <article class="example-card">
+                <h2>:nth-child()</h2>
+                <ul class="number-list">
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                    <li>Fourth item</li>
+                </ul>
+                <p>Every second list item is styled using <code>:nth-child(2)</code>.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Assignment 8 &mdash; Question 1</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Page setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+header {
+    padding: 30px 20px;
+    text-align: center;
+    background: #0f172a;
+    color: white;
+}
+
+header h1 {
+    margin: 0 0 8px;
+}
+
+header p {
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* CSS Grid creates a clean three-column showcase. */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.gallery-card {
+    margin: 0;
+    overflow: hidden;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 8px 22px rgba(15, 23, 42, 0.12);
+}
+
+.image-wrap {
+    position: relative;
+    height: 230px;
+    overflow: hidden;
+}
+
+.image-wrap img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+}
+
+/* Hover zooms the image to 1.1 and adds a semi-transparent overlay. */
+.gallery-card:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-card:hover .overlay {
+    background: rgba(0, 0, 0, 0.28);
+}
+
+figcaption {
+    padding: 16px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+    color: #1e293b;
+}
+
+footer {
+    padding: 22px;
+    text-align: center;
+    color: #64748b;
+}
+
+/* Below 700px, images stack in one column as required. */
+@media (max-width: 700px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .image-wrap {
+        height: 250px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 950px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

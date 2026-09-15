@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>CSS Selectors Practice</h1>
+        <p>Element, class, ID, attribute, and combinator selectors.</p>
+    </header>
+
+    <main>
+        <section class="selector-section">
+            <h2>Basic Selectors</h2>
+            <p>This paragraph demonstrates the <strong>element selector</strong>.</p>
+            <p class="highlight">This paragraph uses a <strong>class selector</strong>.</p>
+            <p id="special">This paragraph uses an <strong>ID selector</strong>.</p>
+            <a href="https://example.com">This link uses an attribute selector.</a>
+        </section>
+
+        <section class="selector-section">
+            <h2>Combinators</h2>
+
+            <div class="combinator-demo">
+                <p>Paragraph inside the demo (descendant selector).</p>
+                <div>
+                    <p>Nested paragraph (also a descendant).</p>
+                </div>
+                <p>Direct paragraph after the nested div.</p>
+            </div>
+
+            <ul class="sibling-list">
+                <li>First item</li>
+                <li>Second item</li>
+                <li>Third item</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Assignment 8 &mdash; Question 4</p>
+    </footer>
+</body>
+</html>
