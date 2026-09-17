@@ -1,0 +1,25 @@
+:root {
+  /* Bootstrap theme variables are overridden to create a custom brand color. */
+  --bs-primary: #6f42c1;
+  --bs-primary-rgb: 111, 66, 193;
+  --bs-font-sans-serif: "DM Sans", sans-serif;
+  --bs-body-font-family: "DM Sans", sans-serif;
+  --bs-body-color: #262231;
+}
+body { font-family: var(--bs-body-font-family); background: #fcfbff; }
+h1, h2, h3, .brand { font-family: "Playfair Display", serif; }
+.site-header { background: #fff; }
+.brand { color: #6f42c1; font-size: 1.7rem; font-weight: 700; }
+.nav-item { color: #514b5e; }
+.nav-item:hover { color: #6f42c1; }
+.theme-badge { background: #ede4fb; color: #5c2da5; }
+.btn-theme { background: #6f42c1; border-color: #6f42c1; color: #fff; }
+.btn-theme:hover { background: #5d35a3; border-color: #5d35a3; color: #fff; }
+.btn-outline-theme { border-color: #6f42c1; color: #6f42c1; }
+.btn-outline-theme:hover { background: #6f42c1; color: #fff; }
+.featured-box { background: #f0eafb; border: 1px solid #dfd0f5; }
+.blog-card { overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.blog-card:hover { transform: translateY(-4px); box-shadow: 0 .75rem 1.5rem rgba(61, 38, 94, .14) !important; }
+.card-img-top { height: 260px; object-fit: cover; }
+.theme-section { background: #6f42c1; color: #fff; }
+.about-copy { max-width: 650px; color: #eee4fb; }

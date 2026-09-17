@@ -1,0 +1,5 @@
+body { font-family: Georgia, "Times New Roman", serif; color: #273329; background: #fffdf8; }
+.lead { font-family: Arial, sans-serif; }
+.food-image { max-height: 390px; width: 100%; object-fit: cover; }
+.list-group, table { font-family: Arial, sans-serif; }
+.table-dark { --bs-table-bg: #273329; }
