@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Password Strength Checker</h1>
+    <script>
+    let password = "  Abhay@123  ";
+    checkPassword(password);
+    function checkPassword(password){
+        let uppercase = false;
+        let lowercase = false;
+        let digit = false;
+        let special = false;
+        let length = false;
+        password = password.trim();
+        if(password.length>=6){
+            length = true;
+        }
+        for(let i=0;i<password.length;i++){
+            let ch = password.charAt(i);
+            if(ch >='A' && ch <='Z'){
+                uppercase = true;
+            }
+            else if(ch >='a' && ch<='z'){
+                lowercase = true;
+            }
+            else if(ch>='0' && ch<='9'){
+                digit = true;
+            }
+            else{
+                special = true;
+            }
+        }
+        if(uppercase && lowercase && digit && special && length){
+            console.log("Password is Strong");
+        }
+        else{
+            console.log("Password is Weak");
+        }
+    }
+    </script>
+</body>
+</html>
