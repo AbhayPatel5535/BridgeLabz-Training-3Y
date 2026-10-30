@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Product List Manager</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 650px; margin: 40px auto; padding: 0 16px; }
+    .controls { display: flex; gap: 8px; }
+    input { flex: 1; padding: 10px; }
+    button { padding: 8px 12px; cursor: pointer; }
+    li { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
+    .product-name { flex: 1; }
+    .edit-input { flex: 1; padding: 7px; }
+  </style>
+</head>
+<body>
+  <h1>Product List Manager</h1>
+  <div class="controls">
+    <input id="productInput" type="text" placeholder="Enter a product name">
+    <button id="addButton">Add Product</button>
+  </div>
+  <ul id="productList"></ul>
+  <script src="script.js"></script>
+</body>
+</html>

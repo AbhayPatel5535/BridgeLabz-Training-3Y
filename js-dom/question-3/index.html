@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Three-Step Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 520px; margin: 40px auto; padding: 0 16px; }
+    .step { display: none; }
+    .step.active { display: block; }
+    label { display: block; margin: 14px 0 6px; }
+    input { width: 100%; box-sizing: border-box; padding: 10px; }
+    button { margin: 18px 8px 0 0; padding: 9px 16px; cursor: pointer; }
+    #summary { background: #f1f1f1; padding: 16px; }
+  </style>
+</head>
+<body>
+  <h1>Registration Form</h1>
+  <p id="stepTitle">Step 1 of 3: Name</p>
+
+  <form id="multiStepForm" novalidate>
+    <section class="step active">
+      <label for="name">Name</label>
+      <input id="name" type="text" autocomplete="name" required>
+    </section>
+
+    <section class="step">
+      <label for="email">Email</label>
+      <input id="email" type="email" autocomplete="email" required>
+    </section>
+
+    <section class="step">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="new-password" minlength="6" required>
+    </section>
+
+    <button id="backButton" type="button" hidden>Back</button>
+    <button id="nextButton" type="button">Next</button>
+  </form>
+
+  <section id="summary" hidden>
+    <h2>Form Summary</h2>
+    <p id="summaryName"></p>
+    <p id="summaryEmail"></p>
+    <p>Password: <span>Not displayed for security</span></p>
+    <button id="editButton" type="button">Edit details</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
