@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q1 - Welcome Page Greeting</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Arial, sans-serif; background: #f3f6fb; color: #172033; }
+    main { max-width: 760px; margin: 55px auto; padding: 32px; background: white; border-radius: 16px; box-shadow: 0 10px 30px #17203312; }
+    h1 { margin-top: 0; color: #2457a6; }
+    .greeting { padding: 18px; border-radius: 10px; background: #eaf2ff; font-size: 1.2rem; }
+    .welcome { margin: 18px 0; padding: 14px; border-left: 4px solid #2457a6; background: #f5f8ff; }
+    button { margin: 7px 7px 0 0; padding: 11px 16px; border: 0; border-radius: 8px; background: #2457a6; color: white; cursor: pointer; }
+    button:hover { background: #173e7b; }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Welcome to Our Website!</h1>
+      <p class="greeting" id="greeting" aria-live="polite">Hello!</p>
+    </header>
+    <section aria-label="Welcome message">
+      <p class="welcome" id="welcomeMessage">We're glad you're here. Explore, learn, and make today count!</p>
+    </section>
+    <section aria-label="Greeting controls">
+      <button id="changeGreeting" type="button">Change Greeting</button>
+      <button id="toggleWelcome" type="button">Hide Welcome Message</button>
+      <button id="showAlert" type="button">Show Greeting Alert</button>
+    </section>
+    <footer><p>Have a productive day!</p></footer>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

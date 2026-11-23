@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 - Product Highlight</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 35px 18px; font-family: Arial, sans-serif; background: #f4f6fa; color: #1d2939; }
+    main { max-width: 1050px; margin: auto; }
+    h1 { color: #2457a6; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px; }
+    .product { position: relative; padding: 20px; background: white; border: 2px solid transparent; border-radius: 14px; box-shadow: 0 5px 18px #17203310; cursor: pointer; transition: .2s; }
+    .product:hover { transform: translateY(-4px); }
+    .product.highlighted { background: #eaf2ff; border-color: #3975d7; }
+    .product[data-discount="true"] { border-top: 5px solid #16a36a; }
+    .product h2 { font-size: 1.1rem; }
+    .details { display: none; color: #536273; font-size: .9rem; }
+    .favorite { float: right; border: 0; background: transparent; font-size: 1.4rem; cursor: pointer; color: #98a2b3; }
+    .favorite.selected { color: #e04468; }
+    .price { font-weight: bold; }
+    .discount-label { color: #128254; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Featured Products</h1><p>Select a product to highlight it. Hover to see more details.</p></header>
+    <section class="products" aria-label="Product list">
+      <article class="product" data-discount="true" data-stock="in">
+        <button class="favorite" type="button" aria-label="Add headphones to favorites">♡</button>
+        <h2>Wireless Headphones</h2><p class="price">₹1,999</p><p class="discount-label">20% OFF</p>
+        <p class="details">Noise reduction, 30-hour battery, and comfortable ear cushions.</p>
+      </article>
+      <article class="product" data-discount="false" data-stock="in">
+        <button class="favorite" type="button" aria-label="Add smartwatch to favorites">♡</button>
+        <h2>Smart Watch</h2><p class="price">₹2,499</p>
+        <p class="details">Fitness tracking, heart-rate monitor, and water resistance.</p>
+      </article>
+      <article class="product" data-discount="true" data-stock="out">
+        <button class="favorite" type="button" aria-label="Add camera to favorites">♡</button>
+        <h2>Digital Camera</h2><p class="price">₹8,999</p><p class="discount-label">10% OFF</p>
+        <p class="details">24 MP sensor, optical zoom, and full-HD video recording.</p>
+      </article>
+      <article class="product" data-discount="false" data-stock="in">
+        <button class="favorite" type="button" aria-label="Add speaker to favorites">♡</button>
+        <h2>Bluetooth Speaker</h2><p class="price">₹1,299</p>
+        <p class="details">Portable speaker with deep bass and 12-hour playback.</p>
+      </article>
+      <article class="product" data-discount="true" data-stock="in">
+        <button class="favorite" type="button" aria-label="Add keyboard to favorites">♡</button>
+        <h2>Mechanical Keyboard</h2><p class="price">₹3,199</p><p class="discount-label">15% OFF</p>
+        <p class="details">Tactile keys, compact layout, and customizable backlight.</p>
+      </article>
+    </section>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

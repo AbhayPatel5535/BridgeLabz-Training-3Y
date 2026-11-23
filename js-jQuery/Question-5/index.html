@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q5 - Team Members Directory</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 35px 18px; font-family: Arial, sans-serif; background: #f4f6fa; color: #1d2939; }
+    main { max-width: 900px; margin: auto; }
+    h1 { color: #2457a6; }
+    .department { margin: 18px 0; padding: 18px; border: 1px solid #dce3ed; border-radius: 12px; background: white; }
+    .department-title { margin-top: 0; cursor: pointer; }
+    .team { display: flex; flex-wrap: wrap; gap: 12px; }
+    .employee { min-width: 170px; padding: 13px; border: 1px solid #dce3ed; border-radius: 9px; background: #f8fafc; cursor: pointer; }
+    .employee.manager { border-left: 4px solid #2457a6; }
+    .employee.highlighted { background: #e2edff; border-color: #3975d7; }
+    .employee.sibling { background: #fff1d6; border-color: #e8bd49; }
+    .contact { display: none; margin-top: 7px; color: #536273; font-size: .85rem; }
+    button { padding: 10px 14px; border: 0; border-radius: 7px; background: #2457a6; color: white; cursor: pointer; }
+    .team-actions { margin: 15px 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Team Members Directory</h1><p>Explore departments, managers, and team members. Hover over an employee to view contact details.</p></header>
+    <section class="department" data-department="Engineering">
+      <h2 class="department-title">Engineering Department</h2>
+      <div class="team">
+        <article class="employee manager"><strong class="name">Aarav Sharma</strong><p>Engineering Manager</p><div class="contact">Email: aarav@example.com<br>Phone: 98765 43210</div></article>
+        <article class="employee"><strong class="name">Diya Verma</strong><p>Frontend Developer</p><div class="contact">Email: diya@example.com<br>Phone: 98765 43211</div></article>
+        <article class="employee"><strong class="name">Kabir Singh</strong><p>Backend Developer</p><div class="contact">Email: kabir@example.com<br>Phone: 98765 43212</div></article>
+      </div>
+    </section>
+    <section class="department" data-department="Design">
+      <h2 class="department-title">Design Department</h2>
+      <div class="team">
+        <article class="employee manager"><strong class="name">Meera Kapoor</strong><p>Design Manager</p><div class="contact">Email: meera@example.com<br>Phone: 98765 43213</div></article>
+        <article class="employee"><strong class="name">Ishaan Gupta</strong><p>UI Designer</p><div class="contact">Email: ishaan@example.com<br>Phone: 98765 43214</div></article>
+        <article class="employee"><strong class="name">Anaya Joshi</strong><p>UX Designer</p><div class="contact">Email: anaya@example.com<br>Phone: 98765 43215</div></article>
+      </div>
+    </section>
+    <section class="department" data-department="Marketing">
+      <h2 class="department-title">Marketing Department</h2>
+      <div class="team">
+        <article class="employee manager"><strong class="name">Rohan Das</strong><p>Marketing Manager</p><div class="contact">Email: rohan@example.com<br>Phone: 98765 43216</div></article>
+        <article class="employee"><strong class="name">Sara Khan</strong><p>Content Strategist</p><div class="contact">Email: sara@example.com<br>Phone: 98765 43217</div></article>
+      </div>
+    </section>
+    <section class="team-actions"><button id="randomEmployee" type="button">Select Random Employee</button></section>
+    <footer><p>Company Team Directory</p></footer>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q3 - Interactive FAQ</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 35px 18px; font-family: Arial, sans-serif; background: #f4f6fa; color: #1d2939; }
+    main { max-width: 780px; margin: auto; }
+    h1 { color: #2457a6; }
+    .faq-item { margin: 13px 0; padding: 17px; background: white; border: 1px solid #e1e7f0; border-radius: 10px; }
+    .question { margin: 0; cursor: pointer; font-size: 1.05rem; }
+    .answer { display: none; padding-top: 10px; color: #536273; }
+    .answer input { width: 100%; margin-top: 8px; padding: 10px; border: 1px solid #cbd5e1; border-radius: 7px; }
+    .faq-item.focused { background: #fff8df; border-color: #e8bd49; }
+    .collapse { padding: 10px 14px; border: 0; border-radius: 7px; background: #2457a6; color: white; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Frequently Asked Questions</h1><p>Click a question to read its answer. Double-click any question to close all answers.</p></header>
+    <section id="faqList" aria-label="FAQ list">
+      <article class="faq-item"><h2 class="question">1. What is jQuery?</h2><div class="answer"><p>jQuery is a JavaScript library that makes DOM manipulation and event handling easier.</p><input type="text" placeholder="Write your question..." aria-label="Ask about jQuery"></div></article>
+      <article class="faq-item"><h2 class="question">2. What is a selector?</h2><div class="answer"><p>A selector finds HTML elements so that jQuery can work with them.</p><input type="text" placeholder="Write your question..." aria-label="Ask about selectors"></div></article>
+      <article class="faq-item"><h2 class="question">3. What does hide() do?</h2><div class="answer"><p>The hide() method hides the selected elements from view.</p><input type="text" placeholder="Write your question..." aria-label="Ask about hide method"></div></article>
+      <article class="faq-item"><h2 class="question">4. What is an event?</h2><div class="answer"><p>An event is an action such as a click, hover, key press, or form submission.</p><input type="text" placeholder="Write your question..." aria-label="Ask about events"></div></article>
+      <article class="faq-item"><h2 class="question">5. What does toggle() do?</h2><div class="answer"><p>toggle() switches an element between visible and hidden states.</p><input type="text" placeholder="Write your question..." aria-label="Ask about toggle method"></div></article>
+    </section>
+    <button class="collapse" id="collapseAll" type="button">Collapse All Answers</button>
+  </main>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
