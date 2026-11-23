@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q2 - Employee Status Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 35px 18px; font-family: Arial, sans-serif; background: #f3f6fb; color: #1d2939; }
+    main { max-width: 850px; margin: auto; }
+    header, .employee-list { padding: 24px; background: white; border-radius: 14px; box-shadow: 0 5px 20px #17203310; }
+    h1 { margin-top: 0; color: #2457a6; }
+    .employee-row { display: flex; justify-content: space-between; align-items: center; gap: 15px; padding: 16px 0; border-bottom: 1px solid #e5eaf1; }
+    .employee-row:last-child { border-bottom: 0; }
+    .status { display: inline-block; margin-top: 5px; padding: 4px 9px; border-radius: 20px; font-size: .82rem; }
+    .active { background: #dcfce7; color: #166534; }
+    .inactive { background: #fee2e2; color: #991b1b; }
+    button { padding: 9px 14px; border: 0; border-radius: 7px; background: #2457a6; color: white; cursor: pointer; }
+    #message { min-height: 24px; color: #b42318; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Employee Status Dashboard</h1><p>Toggle an employee's status. Changes are saved to the JSON Server.</p></header>
+    <section class="employee-list" aria-label="Employees">
+      <p id="message" role="status">Loading employees...</p>
+      <div id="employees"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

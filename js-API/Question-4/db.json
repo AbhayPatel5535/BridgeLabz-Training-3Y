@@ -1,0 +1,78 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aarav Sharma"
+    },
+    {
+      "id": 2,
+      "name": "Diya Verma"
+    },
+    {
+      "id": 3,
+      "name": "Kabir Singh"
+    },
+    {
+      "id": 4,
+      "name": "Meera Kapoor"
+    },
+    {
+      "id": 5,
+      "name": "Rohan Das"
+    }
+  ],
+  "orders": [
+    {
+      "id": 101,
+      "userId": 1,
+      "total": 1299
+    },
+    {
+      "id": 102,
+      "userId": 2,
+      "total": 2499
+    },
+    {
+      "id": 103,
+      "userId": 3,
+      "total": 899
+    },
+    {
+      "id": 104,
+      "userId": 4,
+      "total": 3199
+    },
+    {
+      "id": 105,
+      "userId": 5,
+      "total": 1599
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Headphones",
+      "price": 1999
+    },
+    {
+      "id": 2,
+      "name": "Smart Watch",
+      "price": 2499
+    },
+    {
+      "id": 3,
+      "name": "Speaker",
+      "price": 1299
+    },
+    {
+      "id": 4,
+      "name": "Keyboard",
+      "price": 3199
+    },
+    {
+      "id": 5,
+      "name": "Camera",
+      "price": 8999
+    }
+  ]
+}

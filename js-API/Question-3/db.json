@@ -1,0 +1,40 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Complete HTML assignment",
+      "priority": "low",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Prepare for JavaScript test",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "title": "Review AJAX concepts",
+      "priority": "medium",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Submit project report",
+      "priority": "high",
+      "completed": false
+    },
+    {
+      "id": 5,
+      "title": "Organize study notes",
+      "priority": "low",
+      "completed": true
+    },
+    {
+      "id": 6,
+      "title": "Practice jQuery selectors",
+      "priority": "medium",
+      "completed": false
+    }
+  ]
+}

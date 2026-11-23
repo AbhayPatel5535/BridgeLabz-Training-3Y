@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Q4 - Multi-API Dashboard</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 35px 18px; font-family: Arial, sans-serif; background: #f3f6fb; color: #1d2939; }
+    main { max-width: 950px; margin: auto; }
+    header, .dashboard { padding: 24px; background: white; border-radius: 14px; box-shadow: 0 5px 20px #17203310; }
+    h1 { margin-top: 0; color: #2457a6; }
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 16px; }
+    .card { padding: 22px; border-radius: 12px; background: #eef4ff; }
+    .card h2 { margin: 0 0 12px; font-size: 1rem; color: #536273; }
+    .count { font-size: 2rem; font-weight: bold; color: #2457a6; }
+    .skeleton { height: 36px; width: 70px; border-radius: 7px; background: linear-gradient(90deg, #e2e8f0, #f8fafc, #e2e8f0); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
+    @keyframes shimmer { to { background-position: -200% 0; } }
+    #warning { min-height: 24px; color: #b45309; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Multi-API Dashboard</h1><p>Users, orders, and products are loaded simultaneously.</p></header>
+    <section class="dashboard" aria-label="Dashboard statistics">
+      <p id="warning" role="status"></p>
+      <div class="cards">
+        <article class="card"><h2>Total Users</h2><div id="usersCount" class="skeleton" aria-label="Loading users"></div></article>
+        <article class="card"><h2>Total Orders</h2><div id="ordersCount" class="skeleton" aria-label="Loading orders"></div></article>
+        <article class="card"><h2>Total Products</h2><div id="productsCount" class="skeleton" aria-label="Loading products"></div></article>
+      </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
